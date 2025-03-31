@@ -80,3 +80,7 @@ bundle exec rubocop -A
 これは .dockerignore ファイルの内容で、Docker イメージを作るときに除外したいファイルやディレクトリを指定するものです。
 
 言い換えると、.dockerignore は Git の .gitignore に似た仕組みで、Docker ビルド時に不要なものを含めないためのフィルターです。
+
+### 本番環境についての補足
+1. なぜrailsの本番環境ではUnicorn,Nginxを使うのか?
+https://qiita.com/fritz22/items/fcb81753eaf381b4b33c

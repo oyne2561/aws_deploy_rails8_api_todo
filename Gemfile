@@ -44,6 +44,10 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "rubocop-rails", "~> 2.30", require: false
 end
 
-gem "rubocop-rails", "~> 2.30", require: false
+group :production do
+  gem 'unicorn'
+end
