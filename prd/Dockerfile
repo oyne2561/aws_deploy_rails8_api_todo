@@ -10,6 +10,10 @@ RUN apt-get update -qq && apt-get install -y \
 
 RUN mkdir /app
 WORKDIR /app
+
+# 必要なディレクトリを事前に作成
+RUN mkdir -p /app/tmp/pids /app/log
+
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 RUN gem install bundler
